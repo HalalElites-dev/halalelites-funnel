@@ -24,16 +24,14 @@ const CTASection = () => {
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto font-mono">
               Join the elite community of Muslim developers and businesses building the future, one halal line of code at a time.
             </p>
-            <Button size={'xl'} className='bg-brand-primary hover:bg-brand-primary/90 px-8 py-4 rounded-md text-sm font-mono transition-all duration-300' >
-             <Link
-                  className="text-lg"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  href={"https://calendly.com/halal-elites/30min"}
-                >
-                  {">"} {HERO_CTA_TEXT}
-                </Link>
-            </Button>
+            <Button asChild size={'xl'} className='bg-brand-primary hover:bg-brand-primary/90 px-8 py-4 rounded-md font-mono transition-all duration-300 text-lg'>
+    <Link className='inline-flex items-center justify-center' // Ensure proper display
+        target="_blank"
+        rel="noopener noreferrer"
+        href={"https://calendly.com/halal-elites/30min"}>
+        {">"} {HERO_CTA_TEXT}
+    </Link>
+</Button>
 
           </div>
         </div>

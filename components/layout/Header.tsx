@@ -43,7 +43,7 @@ export function Header() {
                         {/* Desktop Navigation - Right section */}
                         <div className="hidden lg:flex items-center space-x-8">
                             <Navigation />
-                            <Button className="bg-brand-primary hover:bg-brand-primary/90 px-4 py-2 rounded-md text-sm font-mono transition-all">
+                            <Button asChild className="bg-brand-primary hover:bg-brand-primary/90 px-4 py-2 rounded-md text-sm font-mono transition-all">
                                 <Link
                                     target="_blank"
                                     rel="noopener noreferrer"
