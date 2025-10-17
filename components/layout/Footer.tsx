@@ -13,21 +13,23 @@ const Footer = () => {
           <div className="lg:col-span-1">
             <div className="flex items-center mb-4 gap-2">
              
-                <Image suppressHydrationWarning
-                  src="/LogoW.png"
-                  alt="Logo"
-                  width={160}
-                  height={32}
-                  className="block dark:hidden"
-                />
-                <Image suppressHydrationWarning
-                  src="/Logo.png"
-                  alt="Logo"
-                  width={160}
-                  height={32}
-                  className="hidden dark:block"
-                />
-           
+               <Image
+                                              suppressHydrationWarning
+                                              src="/LogoW.png"
+                                              alt="Logo (light)"
+                                              width={160}
+                                              height={32}
+                                              className="block dark:hidden greyscale:hidden"
+                                          />
+                                          <Image
+                                              suppressHydrationWarning
+                                              src="/Logo.png"
+                                              alt="Logo (dark)"
+                                              width={160}
+                                              height={32}
+                                              className="hidden dark:block greyscale:hidden"
+                                          />
+                                         
             </div>
             <p className="text-primary text-sm leading-relaxed mb-6 max-w-xs font-mono">{FOOTER_TEXT}</p>
             <div className="flex items-center gap-4">

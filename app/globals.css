@@ -115,7 +115,6 @@
 
 /* ===== DARK MODE COLORS ===== */
 .dark {
-  
   /* Base Colors - Dark Mode Focused */
   --background: oklch(13% 0.028 261.692); /* Very dark gray/almost black for background */
   --foreground: oklch(0.96 0 0); /* Light gray for main text */

@@ -4,6 +4,7 @@ import { motion } from 'framer-motion'
 import Image from 'next/image'
 import HolographicBackground from '@/lib/bgAnimated';
 import { PaintRollerIcon } from 'lucide-react';
+import Link from 'next/link';
 
 interface PortfolioProject {
   id: number;
@@ -13,18 +14,20 @@ interface PortfolioProject {
   category: string;
   year: string;
   color: string;
+  link?: string;
 }
 
 const PortfolioPage = () => {
   const portfolioProjects: PortfolioProject[] = [
     {
       id: 1,
-      title: "Two Spoons",
-      description: "Complete overhaul of a restaurant website focusing on user experience and conversion optimization.",
-      image: "/example1.webp",
+      title: "Influence Cafe",
+      description: "Developed a landing page for Influence Cafe to enhance their online presence and attract more customers.",
+      image: "/mockup-influence Cafe.webp",
       category: "Web Development",
       year: "2025",
-      color: "bg-brand-primary"
+      color: "bg-brand-primary",
+      link: "https://influencecafe.co/"
     },
     {
       id: 2,
@@ -60,7 +63,7 @@ const PortfolioPage = () => {
       {/* Minimized Intro Section */}
       <HolographicBackground variant='two' />
 
-      <section className="relative py-24 md:py-32 bg-background overflow-hidden">
+      <section className="relative py-24 md:py-32 md:bg-background overflow-hidden">
 
         {/* Title Overlay */}
         <div className="relative z-10 flex items-center justify-center">
@@ -129,12 +132,12 @@ const PortfolioPage = () => {
                       <p className="text-muted-foreground text-lg leading-relaxed mb-8">
                         {project.description}
                       </p>
-                      <button className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${project.color} text-white font-medium rounded-lg hover:shadow-lg transform transition-all duration-300`}>
+                      <Link href={project.link ?? '#'} className={`inline-flex items-center px-6 py-3 bg-gradient-to-r ${project.color} text-white font-medium rounded-lg hover:shadow-lg transform transition-all duration-300`}>
                         View Project
                         <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
                         </svg>
-                      </button>
+                      </Link>
                     </div>
                   </motion.div>
 
@@ -157,9 +160,9 @@ const PortfolioPage = () => {
                       <Image
                         src={project.image}
                         alt={project.title}
-                        width={600}
-                        height={400}
-                        className="w-full h-full object-cover rounded-2xl shadow-2xl"
+                        width={1280}
+                        height={720}
+                        className=" object-contain  rounded-2xl shadow-2xl"
                       />
                     </div>
                   </motion.div>

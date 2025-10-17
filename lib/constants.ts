@@ -260,38 +260,38 @@ export const FOOTER_LINKS = [
 
 export const portfolioItems =[
    {
-    title: "Masjid Al-Noor",
+    title: "Influence Cafe",
     category: "Landing Page",
-    description: "Landing page for a local mosque.",
-    image: "/placeholder.webp",
-    technologies: ["Next.js", "Tailwind", "Vercel"],
+    description: "Landing page for a local cafe in Toledo.",
+    image: "/mockup-influence Cafe.webp",
+    technologies: ["Next.js", "Tailwind", "Netlify"],
     status: "Live",
     color: "var(--brand-cyan)",
     icon: Globe,
-    link: 'https://masjid-al-noor.com'
+    link: 'https://www.influencecafe.co/'
   },
-  {
-    title: "Halal Bites Restaurant",
-    category: "Multi-Page Website",
-    description: "Complete restaurant site with menu and reservations.",
-    image: "/placeholder.webp",
-    technologies: ["React", "Node.js", "MongoDB"],
-    status: "Live",
-    color: "var(--brand-blue)",
-    icon: Smartphone,
-    link: 'https://halal-bites-restaurant.com'
-  },
-  {
-    title: "Islamic Learning Hub",
-    category: "Educational Platform",
-    description: "E-learning platform with course management system.",
-    image: "/placeholder.webp",
-    technologies: ["Next.js", "Supabase", "Stripe"],
-    status: "In Development",
-    color: "var(--brand-purple)",
-    icon: Code,
-    link: 'https://islamic-learning-hub.com'
-  },
+  // {
+  //   title: "Halal Bites Restaurant",
+  //   category: "Multi-Page Website",
+  //   description: "Complete restaurant site with menu and reservations.",
+  //   image: "/placeholder.webp",
+  //   technologies: ["React", "Node.js", "MongoDB"],
+  //   status: "Live",
+  //   color: "var(--brand-blue)",
+  //   icon: Smartphone,
+  //   link: 'https://halal-bites-restaurant.com'
+  // },
+  // {
+  //   title: "Islamic Learning Hub",
+  //   category: "Educational Platform",
+  //   description: "E-learning platform with course management system.",
+  //   image: "/placeholder.webp",
+  //   technologies: ["Next.js", "Supabase", "Stripe"],
+  //   status: "In Development",
+  //   color: "var(--brand-purple)",
+  //   icon: Code,
+  //   link: 'https://islamic-learning-hub.com'
+  // },
 ]
 
 import type { IconType } from "react-icons";

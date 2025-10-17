@@ -31,11 +31,11 @@ const Hero = () => {
                             </Link>
                         </Button>
 
-                       <Button asChild variant='outline' size={'xl'} className='hover:text-brand-primary text-secondary-foreground font-mono font-thin duration-300 animate-holographic hover:border-brand-primary !text-lg'>
-    <Link className='inline-flex items-center justify-center' href={"/about"}>
-        {HERO_2NDARY_CTA_TEXT}
-    </Link>
-</Button>
+                        <Button asChild variant='outline' size={'xl'} className='hover:text-brand-primary text-secondary-foreground font-mono font-thin duration-300 animate-holographic hover:border-brand-primary !text-lg'>
+                            <Link className='inline-flex items-center justify-center' href={"/about"}>
+                                {HERO_2NDARY_CTA_TEXT}
+                            </Link>
+                        </Button>
                     </div>
                 </div>
             </div>

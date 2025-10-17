@@ -22,22 +22,23 @@ export function Header() {
 
                         {/* Left section: Logo and brand */}
                         <Link href="/" className="flex items-center space-x-2">
-                            <Image 
+                            <Image
                                 suppressHydrationWarning
                                 src="/LogoW.png"
-                                alt="Logo"
+                                alt="Logo (light)"
                                 width={160}
                                 height={32}
-                                className="block dark:hidden"
+                                className="block dark:hidden greyscale:hidden"
                             />
-                            <Image 
+                            <Image
                                 suppressHydrationWarning
                                 src="/Logo.png"
-                                alt="Logo"
+                                alt="Logo (dark)"
                                 width={160}
                                 height={32}
-                                className="hidden dark:block"
+                                className="hidden dark:block greyscale:hidden"
                             />
+                           
                         </Link>
 
                         {/* Desktop Navigation - Right section */}

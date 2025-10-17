@@ -27,15 +27,18 @@ const Portfolio = () => {
         <div>
           {/* portfolio section */}
           <div className='max-w-7xl mx-auto relative z-10'>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+            <div className={`grid gap-8 max-w-7xl mx-auto ${portfolioItems.length === 1
+                ? 'place-items-center'
+                : 'md:grid-cols-2 lg:grid-cols-3'
+              }`}>
               {portfolioItems.map((item, index) => (
                 <div key={index} className="">
                   {/* Square Image Container */}
-                  <div className="relative aspect-square mb-6 rounded-2xl overflow-hidden glass-effect hover:scale-105 transition-all duration-300">
+                  <div className="relative  mb-6 rounded-2xl overflow-hidden glass-effect ">
                     <Image
                       width={600}
                       height={300}
-                      src={item  .image || '/placeholder.svg'}
+                      src={item.image || '/placeholder.webp'}
                       alt={item.title}
                       className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
                     />
