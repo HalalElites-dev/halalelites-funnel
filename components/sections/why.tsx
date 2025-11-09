@@ -97,7 +97,7 @@ export function WhyItMattersSection() {
             </div>
           </motion.div>
 
-          {/* Pain Point 2 - Right aligned with floating image left */}
+         {/* Pain Point 2 - Right aligned with floating image left */}
 
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -107,23 +107,7 @@ export function WhyItMattersSection() {
             className="relative mb-32 lg:mb-40"
           >
             <div className="lg:grid lg:grid-cols-2 lg:gap-16 items-center">
-              <motion.div
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.7, delay: 0.2 }}
-                className="order-2 lg:order-1 mt-8 lg:mt-0"
-              >
-                <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10 lg:transform lg:-translate-y-8">
-                  <Image
-                    src="/customer-data.webp"
-                    alt="Delivery app customer data showing no restaurant access"
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-              </motion.div>
-              <div className="relative z-10 order-1 lg:order-2">
+              <div className="relative z-10  lg:order-2">
 
                 <h3 className="text-4xl md:text-5xl font-bold mb-6">{painPoints[1].title}</h3>
                 <p className="text-xl text-muted-foreground leading-relaxed mb-8">
@@ -135,6 +119,22 @@ export function WhyItMattersSection() {
                   <div className="text-sm font-semibold text-brand-primary">{painPoints[1].statLabel}</div>
                 </div>
               </div>
+              <motion.div
+                initial={{ opacity: 0, y: 50 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.7, delay: 0.2 }}
+                className="mt-8 lg:mt-0 lg:order-1"
+              >
+                <div className="relative aspect-[4/3] rounded-3xl overflow-hidden shadow-2xl border-4 border-white/10 lg:transform lg:-translate-y-8">
+                  <Image
+                    src="/customer-data.webp"
+                    alt="Delivery app customer data showing no restaurant access"
+                    fill
+                    className="object-cover"
+                  />
+                </div>
+              </motion.div>
             </div>
           </motion.div>
 

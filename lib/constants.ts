@@ -17,10 +17,10 @@ export const SITE_URL = "https://halalelites.dev";
 
 // Navigation Links
 export const NAV_LINKS = [
-  { label: "Why", href: "#why" },
-  { label: "Process", href: "#process" },
-  { label: "Portfolio", href: "#portfolio" },
-  { label: "Book", href: "#book" },
+  { label: "Why It Matters", href: "#why" },
+  { label: "How It Works", href: "#process" },
+  { label: "Our Work", href: "#portfolio" },
+  { label: "Pricing", href: "#pricing" },
 ];
 
 // Hero Section

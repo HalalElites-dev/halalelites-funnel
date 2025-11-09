@@ -12,7 +12,7 @@ export function BookingSection() {
   ]
 
   return (
-    <section id="book" className="section-spacing">
+    <section id="pricing" className="section-spacing">
       <div className="container mx-auto px-4">
         <motion.div
           initial={{ opacity: 0, y: 20 }}

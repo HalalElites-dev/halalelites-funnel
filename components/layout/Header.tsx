@@ -7,7 +7,7 @@ import { ThemeToggle } from "@/components/ThemeToggle"
 import Image from "next/image"
 import { NAV_LINKS } from "@/lib/constants"
 import Link from "next/link"
-
+import {scrollToSection} from '@/lib/utils'
 export function Navbar() {
     
     const [isScrolled, setIsScrolled] = useState(false)
@@ -51,17 +51,18 @@ export function Navbar() {
                     </Link>
 
                     {/* Smooth scroll links */}
-                    <div className="flex gap-6 text-sm font-medium">
-                        {NAV_LINKS.map((link) => (
-                            <Link
-                                key={link.href}
-                                href={link.href}
-                                className="text-foreground/70 hover:text-foreground transition-colors"
-                            >
-                                {link.label}
-                            </Link>
-                        ))}
-                    </div>
+                   <div className="flex gap-6 text-sm font-medium">
+						{NAV_LINKS.map((link) => (
+							<div
+								key={link.href}
+								// 1. AVOID 'href' on Link/a, use a simple div or button with onClick
+								onClick={() => scrollToSection(link.href.substring(1))}
+								className="text-foreground/70 hover:text-foreground transition-colors cursor-pointer" // Add cursor-pointer for good UX
+							>
+								{link.label}
+							</div>
+						))}
+					</div>
 
                     {/* CTA & Theme Toggle */}
                     <div className="flex items-center gap-3">
@@ -79,7 +80,7 @@ export function Navbar() {
             <nav className="fixed top-0 left-0 right-0 z-[9999] md:hidden bg-card/95 backdrop-blur-lg border-b border-border">
                 <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
                     {/* Logo */}
-                    <div className="flex items-center mb-4 gap-2">
+                    <div className="flex items-center  gap-2">
 
                         <Image
                             suppressHydrationWarning
@@ -115,36 +116,27 @@ export function Navbar() {
 
                 {/* Mobile Menu Dropdown */}
                 {isMobileMenuOpen && (
-                    <div className="bg-card border-b border-border shadow-lg">
+                   <div className="bg-card border-b border-border shadow-lg">
                         <div className="flex flex-col p-4 space-y-3">
                             {NAV_LINKS.map((link) => (
                                 <a
                                     key={link.href}
-                                    href={link.href}
-                                    className="text-foreground/70 hover:text-foreground transition-colors py-2"
-                                    onClick={() => setIsMobileMenuOpen(false)}
+                                   
+                                    onClick={() => {
+                                        scrollToSection(link.href.substring(1));
+                                        setIsMobileMenuOpen(false); // Close menu on click
+                                    }}
+                                    className="text-foreground/70 hover:text-foreground transition-colors py-2 text-center text-2xl uppercase cursor-pointer"
                                 >
                                     {link.label}
                                 </a>
                             ))}
-                            <a href="#book" onClick={() => setIsMobileMenuOpen(false)}>
-                                <Button className="w-full bg-brand-primary hover:bg-brand-primary/90 text-white rounded-full">
-                                    Book Free Call
-                                </Button>
-                            </a>
                         </div>
                     </div>
                 )}
             </nav>
 
-            {/* Persistent Mobile CTA */}
-            <div className="fixed bottom-4 left-4 right-4 z-[9998] md:hidden">
-                <a href="#book">
-                    <Button className="w-full bg-brand-primary hover:bg-brand-primary/90 text-white rounded-full shadow-lg">
-                        Book Free Call
-                    </Button>
-                </a>
-            </div>
+           
         </>
     )
 }

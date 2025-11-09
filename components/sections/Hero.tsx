@@ -46,7 +46,7 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center overflow-hidden lg:mt-10"
+      className="relative min-h-screen flex items-center justify-center overflow-hidden mt-8 lg:mt-10"
     >
       {/* Background */}
       <HolographicBackground variant="three" />
@@ -66,7 +66,7 @@ export function HeroSection() {
               to Delivery Apps
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-light">
-              Custom landing pages that redirect customers from UberEats to your own ordering system — in 7 days.
+              Take back your profits with a high-converting landing page built exclusively for Halal restaurants.
             </p>
           </div>
 
@@ -121,6 +121,18 @@ export function HeroSection() {
               <span>4 spots/month</span>
             </div>
           </div>
+
+          {/* integration trust stripe */}
+             {/* <div className="pt-2">
+              <p className="text-xs text-muted-foreground mb-2">Integrates seamlessly with:</p>
+              <div className="flex flex-wrap gap-2">
+                {integrations.map((integration) => (
+                  <Badge key={integration} variant="outline" className="text-xs">
+                    {integration}
+                  </Badge>
+                ))}
+              </div>
+            </div> */}
         </div>
       </div>
 
@@ -140,7 +152,7 @@ export function DetailedValueSection() {
   const integrations = ["Toast", "Square", "Cake", "Clover"]
 
   return (
-    <section className="py-20 bg-gradient-to-b from-background to-muted/20">
+    <section className="py-20 ">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto space-y-16">
           
@@ -181,11 +193,11 @@ export function DetailedValueSection() {
           </Card>
 
           {/* Pricing */}
-          <Card className="p-10 bg-gradient-to-br from-orange-950/20 to-background border-orange-500/20">
+          <Card className="p-10 bg-background glass-effect border border-brand-primary">
             <div className="text-center space-y-6">
               <div>
                 <div className="flex items-baseline justify-center gap-3">
-                  <span className="text-5xl md:text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-red-500">
+                  <span className="text-5xl md:text-6xl font-bold text-brand-primary">
                     $899
                   </span>
                   <span className="text-2xl text-muted-foreground line-through">$1,199</span>
@@ -196,7 +208,7 @@ export function DetailedValueSection() {
               <div className="space-y-3 pt-4">
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-center justify-center gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-orange-500 flex-shrink-0" />
+                    <CheckCircle2 className="h-5 w-5 text-brand-primary flex-shrink-0" />
                     <span className="text-base">{feature}</span>
                   </div>
                 ))}
@@ -207,7 +219,7 @@ export function DetailedValueSection() {
               </Badge>
 
               <div className="pt-6">
-                <Button size="lg" className="text-lg px-10 py-6 rounded-full bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-700 hover:to-red-700 w-full sm:w-auto">
+                <Button size="lg" className="text-lg px-10 py-6 rounded-full bg-brand-primary w-full sm:w-auto">
                   Book Your Free Strategy Call
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>

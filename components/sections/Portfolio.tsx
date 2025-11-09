@@ -80,7 +80,7 @@ export function PortfolioSection() {
                         exit={{ opacity: 0, x: -100 }}
                         transition={{ duration: 0.5 }}
                     >
-                        <Card className="overflow-hidden relative h-[600px] lg:h-[600px]">
+                        <Card className="overflow-hidden relative h-vh lg:h-[600px]">
                             <div className="grid lg:grid-cols-12 gap-0 h-full">
                                 {/* LEFT CONTENT */}
                                 <div className="lg:col-span-5 p-8 lg:p-10 flex flex-col justify-between">
@@ -120,14 +120,14 @@ export function PortfolioSection() {
                                 </div>
 
                                 {/* RIGHT IMAGES */}
-                                 <div className="lg:col-span-7 relative h-[550px] flex items-center justify-center">
+                                 <div className="lg:col-span-7 relative h-[550px]  lg:w-full flex items-center justify-center">
                                     <div className="relative w-full h-full ">
-                                        <div className="absolute top-0 left-0 right-5 h-[65%] rounded-lg overflow-hidden border border-border  shadow-2xl">
+                                        <div className="absolute top-0 left-0 right-1 lg:right-5 h-[65%] rounded-lg overflow-hidden border border-border  shadow-2xl">
                                             <Image
                                                 src={project.after.desktopImage}
                                                 alt={`${project.name} desktop`}
                                                 fill
-                                                className="object-cover"
+                                                className="lg:object-cover object-contain"
                                             />
                                         </div>
                                         <div className="absolute bottom-0 right-8 w-32 h-64 rounded-lg overflow-hidden border-2 border-background shadow-2xl">
