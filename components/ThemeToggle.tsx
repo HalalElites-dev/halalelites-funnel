@@ -9,9 +9,9 @@ export function ThemeToggle() {
 
   const icon =
     theme === "dark" ? (
-      <Moon className="h-[1.2rem] w-[1.2rem]" />
+      <Moon className="h-[1.2rem] w-[1.2rem]"  suppressHydrationWarning/>
     ) : (
-      <Sun className="h-[1.2rem] w-[1.2rem]" />
+      <Sun className="h-[1.2rem] w-[1.2rem]"  suppressHydrationWarning/>
     )
 
   const handleToggle = () => {
@@ -21,7 +21,7 @@ export function ThemeToggle() {
   }
 
   return (
-    <Button variant="outline" size="icon" onClick={handleToggle} aria-label="Toggle theme">
+    <Button variant="outline" size="icon" onClick={handleToggle} aria-label="Toggle theme" suppressHydrationWarning>
       {icon}
       <span className="sr-only">Toggle theme</span>
     </Button>

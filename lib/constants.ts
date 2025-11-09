@@ -13,15 +13,14 @@ import {
 import { FaXTwitter, FaGithub, FaLinkedin } from "react-icons/fa6";
 
 export const SITE_TITLE = "HalalElites";
-export const SITE_TAGLINE = "Boost your productivity with AI-powered tools.";
 export const SITE_URL = "https://halalelites.dev";
 
 // Navigation Links
 export const NAV_LINKS = [
-  { label: "./about", href: "/about" },
-  { label: "./portfolio", href: "/portfolio" },
-  { label: "./services", href: "/services" },
-  { label: "./contact", href: "/contact" },
+  { label: "Why", href: "#why" },
+  { label: "Process", href: "#process" },
+  { label: "Portfolio", href: "#portfolio" },
+  { label: "Book", href: "#book" },
 ];
 
 // Hero Section

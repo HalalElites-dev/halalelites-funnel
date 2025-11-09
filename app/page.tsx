@@ -1,16 +1,21 @@
-import Hero from "@/components/sections/Hero";
-import Services from "@/components/sections/Services";
-import CTASection from "@/components/sections/CTASection";
-// import FutureVision from "@/components/sections/FutureVision";
-import Portfolio from "@/components/sections/Portfolio";
+import { AcceleratorSection } from "@/components/sections/accelerator";
+import { BookingSection } from "@/components/sections/book";
+import { HeroSection } from "@/components/sections/hero";
+import { PortfolioSection } from "@/components/sections/portfolio";
+import { ProcessSection } from "@/components/sections/process";
+import { WhyItMattersSection } from "@/components/sections/why";
+
+
+
 export default function Home() {
   return (
   <main>
-    <Hero/>
-    <Services/>
-    {/* <FutureVision/> */}
-    <Portfolio/>
-    <CTASection/>
+   <HeroSection />
+   <WhyItMattersSection />
+   <ProcessSection />
+   <PortfolioSection />
+   <BookingSection/>
+   <AcceleratorSection/>
   </main>
   );
 }

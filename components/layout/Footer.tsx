@@ -1,130 +1,91 @@
+"use client"
+
+import { FaXTwitter, FaLinkedin } from "react-icons/fa6";
+import { NAV_LINKS } from "@/lib/constants"
 import Link from "next/link"
-import { FOOTER_TEXT, SITE_TITLE, SOCIAL_LINKS } from "@/lib/constants"
 import Image from "next/image"
-const Footer = () => {
-  const currentYear = new Date().getFullYear()
+
+export function Footer() {
+ 
+
+  const socialLinks = [
+    { icon: FaXTwitter, href: "https://twitter.com/halalelites", label: "Twitter" },
+    { icon: FaLinkedin, href: "https://linkedin.com/company/halal-elites", label: "LinkedIn" },
+  ]
 
   return (
-    <footer className="border-t py-12 px-6">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8 lg:gap-12">
+    <footer className="bg-card border-t border-border py-12">
+      <div className="container mx-auto px-4">
+        <div className="grid md:grid-cols-3 gap-8 mb-8">
+          {/* Brand */}
+          <div>
+            <Link className="flex items-center mb-4 gap-2 " href="#">
 
-          {/* Left section - Brand and description */}
-          <div className="lg:col-span-1">
-            <div className="flex items-center mb-4 gap-2">
-             
-               <Image
-                                              suppressHydrationWarning
-                                              src="/LogoW.png"
-                                              alt="Logo (light)"
-                                              width={160}
-                                              height={32}
-                                              className="block dark:hidden greyscale:hidden"
-                                          />
-                                          <Image
-                                              suppressHydrationWarning
-                                              src="/Logo.png"
-                                              alt="Logo (dark)"
-                                              width={160}
-                                              height={32}
-                                              className="hidden dark:block greyscale:hidden"
-                                          />
-                                         
-            </div>
-            <p className="text-primary text-sm leading-relaxed mb-6 max-w-xs font-mono">{FOOTER_TEXT}</p>
-            <div className="flex items-center gap-4">
-              {SOCIAL_LINKS.map((link) => (
-                <Link
-                  key={link.name}
-                  href={link.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="transition-colors"
-                >
-                  <span className="sr-only">{link.name}</span>
-                  <link.icon className="h-5 w-5 text-primary hover:text-brand-primary" />
-                </Link>
-              ))}
-            </div>
+                        <Image
+                            suppressHydrationWarning
+                            src="/LogoW.png"
+                            alt="Logo (light)"
+                            width={160}
+                            height={32}
+                            className="block dark:hidden greyscale:hidden"
+                        />
+                        <Image
+                            suppressHydrationWarning
+                            src="/Logo.png"
+                            alt="Logo (dark)"
+                            width={160}
+                            height={32}
+                            className="hidden dark:block greyscale:hidden"
+                        />
+
+                    </Link>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              Helping Halal restaurants take back control of their profits and customer relationships.
+            </p>
           </div>
 
-          {/* Navigation Columns */}
-          <div className="lg:col-span-3 grid grid-cols-1 sm:grid-cols-3 gap-8">
+          {/* Navigation */}
+          <div>
+            <h4 className="font-semibold mb-3">Quick Links</h4>
+            <nav className="flex flex-col gap-2">
+              {NAV_LINKS.map((link) => (
+                <a
+                  key={link.href}
+                  href={link.href}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
+          </div>
 
-            {/* Quick Links Column */}
-            <div>
-              <h3 className="font-semibold text-primary mb-4 font-sans">QUICK LINKS</h3>
-              <ul className="space-y-3 font-mono ">
-               
-                <li>
-                  <Link href="/about" className="  transition-colors text-sm hover:text-brand-primary ">
-                    ./about
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/portfolio" className="  transition-colors text-sm hover:text-brand-primary">
-                    ./portfolio
-                  </Link>
-                </li>
-                 <li>
-                  <Link href="/services" className=" = transition-colors text-sm hover:text-brand-primary ">
-                    ./services
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Company Column  */}
-             <div>
-              <h3 className="font-semibold text-primary mb-4 font-sans">Services</h3>
-              <ul className="space-y-3 font-mono  ">
-                <li className="transition-colors text-md hover:text-brand-primary">
-                  Web Design
-                </li>
-                <li className="transition-colors text-md hover:text-brand-primary">
-                  Web Applications
-                </li>
-                <li className="transition-colors text-md hover:text-brand-primary">
-                  E-commerce Solutions
-                </li>
-              </ul>
-            </div>
-            {/* Future Vision */}
-            <div>
-              <h3 className="font-semibold text-primary mb-4 font-sans">Future Vision</h3>
-              <ul className="space-y-3 font-mono  ">
-                <li className="transition-colors text-md hover:text-brand-primary">
-                  AI Lab
-                </li>
-                <li className="transition-colors text-md hover:text-brand-primary">
-                  Mentorship
-                </li>
-                <li className="transition-colors text-md hover:text-brand-primary">
-                  Community
-                </li>
-              </ul>
+          {/* Contact & Social */}
+          <div>
+            <h4 className="font-semibold mb-3">Connect</h4>
+            <p className="text-sm text-muted-foreground mb-4">Toledo, OH • Serving Halal restaurants nationwide</p>
+            <div className="flex gap-4">
+              {socialLinks.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-muted-foreground hover:text-brand-primary transition-colors"
+                  aria-label={social.label}
+                >
+                  <social.icon className="h-5 w-5" />
+                </a>
+              ))}
             </div>
           </div>
         </div>
 
-        {/* Bottom section - Fixed: Moved outside the main grid */}
-        <div className="flex flex-col sm:flex-row justify-center items-center pt-8 mt-8 border-t border-accent-foreground">
-          <p className="text-sm mb-4 sm:mb-0">© {currentYear} {SITE_TITLE}. All rights reserved.</p>
-          {/* <div className="flex items-center gap-6">
-            {FOOTER_LINKS.map((link) => (
-              <Link
-                key={link.label}
-                href={link.href}
-                className=" hover:text-primary transition-colors text-sm underline"
-              >
-                {link.label}
-              </Link>
-            ))}
-          </div> */}
+        {/* Bottom Bar */}
+        <div className="pt-8 border-t border-border text-center">
+          <p className="text-sm text-muted-foreground">© 2025 halal-elites. All rights reserved.</p>
         </div>
       </div>
     </footer>
   )
 }
-
-export default Footer

@@ -1,5 +1,5 @@
-import Footer from "@/components/layout/Footer";
-import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import { Navbar } from "@/components/layout/Header";
 import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme-provider"
 import "./globals.css";
@@ -41,7 +41,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-             <Header />
+             <Navbar />
              {children}
              <Footer />
   
