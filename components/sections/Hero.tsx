@@ -4,11 +4,12 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button"
 import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { CheckCircle2, TrendingDown, ArrowRight } from "lucide-react"
+import { CheckCircle2, TrendingDown } from "lucide-react"
 import HolographicBackground from "@/lib/bgAnimated"
+import { scrollToSection } from "@/lib/utils"
 
 // Animated counter component
-function AnimatedCounter({ end, duration = 2000, prefix = "", suffix = "" }: { 
+function AnimatedCounter({ end, duration = 2000, prefix = "", suffix = "" }: {
   end: number
   duration?: number
   prefix?: string
@@ -23,7 +24,7 @@ function AnimatedCounter({ end, duration = 2000, prefix = "", suffix = "" }: {
     const animate = (currentTime: number) => {
       if (!startTime) startTime = currentTime
       const progress = Math.min((currentTime - startTime) / duration, 1)
-      
+
       setCount(Math.floor(progress * end))
 
       if (progress < 1) {
@@ -50,12 +51,12 @@ export function HeroSection() {
     >
       {/* Background */}
       <HolographicBackground variant="three" />
-     
+
 
       {/* Main Content - ABOVE THE FOLD */}
       <div className="relative z-10 container mx-auto px-4 py-20">
         <div className="max-w-5xl mx-auto text-center space-y-12">
-          
+
           {/* THE HOOK - One Power Statement */}
           <div className="space-y-6">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-[1.1] tracking-tight">
@@ -75,12 +76,12 @@ export function HeroSection() {
             <Card className="relative overflow-hidden border-2 border-destructive/30 bg-destructive/5 p-12 max-w-2xl mx-auto">
               {/* Animated glow effect */}
               <div className="absolute inset-0 bg-gradient-to-r from-destructive/0 via-destructive/10 to-destructive/0 animate-pulse" />
-              
+
               <div className="relative space-y-6">
                 <div className="text-red-400 text-sm font-semibold tracking-wider uppercase">
                   Every Month You&apos;re Losing
                 </div>
-                
+
                 <div className="space-y-2">
                   <AnimatedCounter end={3000} prefix="$" />
                   <div className="text-muted-foreground text-lg">
@@ -99,7 +100,9 @@ export function HeroSection() {
 
           {/* PRIMARY CTA */}
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <Button size="lg" className="text-lg px-10 py-6 rounded-full bg-brand-primary shadow-2xl ">
+            <Button
+              onClick={() => scrollToSection('pricing')}
+              size="lg" className="text-lg px-10 py-6 rounded-full bg-brand-primary shadow-2xl cursor-pointer ">
               Book Your Free Strategy Call
             </Button>
           </div>
@@ -123,7 +126,7 @@ export function HeroSection() {
           </div>
 
           {/* integration trust stripe */}
-             {/* <div className="pt-2">
+          {/* <div className="pt-2">
               <p className="text-xs text-muted-foreground mb-2">Integrates seamlessly with:</p>
               <div className="flex flex-wrap gap-2">
                 {integrations.map((integration) => (
@@ -136,7 +139,7 @@ export function HeroSection() {
         </div>
       </div>
 
-    
+
     </section>
   )
 }
@@ -155,7 +158,7 @@ export function DetailedValueSection() {
     <section className="py-20 ">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto space-y-16">
-          
+
           {/* The Problem (detailed) */}
           <div className="text-center space-y-6">
             <h2 className="text-3xl md:text-4xl font-bold">
@@ -219,9 +222,9 @@ export function DetailedValueSection() {
               </Badge>
 
               <div className="pt-6">
-                <Button size="lg" className="text-lg px-10 py-6 rounded-full bg-brand-primary w-full sm:w-auto">
+                <Button onClick={() => scrollToSection('pricing')}
+                  size="lg" className="text-lg px-10 py-6 rounded-full bg-brand-primary w-full sm:w-auto cursor-pointer">
                   Book Your Free Strategy Call
-                  <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </div>
             </div>

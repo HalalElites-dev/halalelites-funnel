@@ -53,11 +53,13 @@ export function Navbar() {
           {/* CTA & Theme Toggle */}
           <div className="flex items-center gap-3">
             <ThemeToggle />
-            <a href="#book">
-              <Button className="bg-brand-primary hover:bg-brand-primary/90 text-white rounded-full px-6">
+            
+              <Button
+                onClick={() => scrollToSection('pricing')}
+                className="bg-brand-primary hover:bg-brand-primary/90 text-white rounded-full px-6 cursor-pointer"
+              >
                 Book Free Call
               </Button>
-            </a>
           </div>
         </div>
       </nav>

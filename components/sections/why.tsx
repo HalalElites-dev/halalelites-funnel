@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button"
 import { Target, Zap, Rocket } from "lucide-react"
 import Image from "next/image"
 import HolographicBackground from "@/lib/bgAnimated"
-
+import { scrollToSection } from "@/lib/utils"
 export function WhyItMattersSection() {
   const painPoints = [
     {
@@ -97,7 +97,7 @@ export function WhyItMattersSection() {
             </div>
           </motion.div>
 
-         {/* Pain Point 2 - Right aligned with floating image left */}
+          {/* Pain Point 2 - Right aligned with floating image left */}
 
           <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -180,63 +180,63 @@ export function WhyItMattersSection() {
         </div>
 
         {/* Why Halal-Elites - Compact Grid Version */}
-<motion.section
-  initial={{ opacity: 0, y: 30 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.6 }}
-  className="mt-24 text-center"
->
-  <h3 className="text-3xl md:text-4xl font-bold mb-4">Why Halal-Elites</h3>
-  <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-16">
-    We&apos;re not just another web agency — we build for the Halal market.
-  </p>
+        <motion.section
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="mt-24 text-center"
+        >
+          <h3 className="text-3xl md:text-4xl font-bold mb-4">Why Halal-Elites</h3>
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-16">
+            We&apos;re not just another web agency — we build for the Halal market.
+          </p>
 
-  {/* 3 Compact Cards */}
-  <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-    <Card className="p-8 border border-border bg-card hover:shadow-lg transition-all duration-300">
-      <Target className="h-10 w-10 text-brand-primary mx-auto mb-5" />
-      <h4 className="text-xl font-semibold mb-3">We Know the Market</h4>
-      <p className="text-muted-foreground text-sm leading-relaxed">
-        We understand what drives Halal customers — family trust, faith, and repeat orders.
-      </p>
-    </Card>
+          {/* 3 Compact Cards */}
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <Card className="p-8 border border-border bg-card hover:shadow-lg transition-all duration-300">
+              <Target className="h-10 w-10 text-brand-primary mx-auto mb-5" />
+              <h4 className="text-xl font-semibold mb-3">We Know the Market</h4>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                We understand what drives Halal customers — family trust, faith, and repeat orders.
+              </p>
+            </Card>
 
-    <Card className="p-8 border border-border bg-card hover:shadow-lg transition-all duration-300">
-      <Zap className="h-10 w-10 text-brand-primary mx-auto mb-5" />
-      <h4 className="text-xl font-semibold mb-3">Transition, Not Disruption</h4>
-      <p className="text-muted-foreground text-sm leading-relaxed">
-        Keep DoorDash & UberEats while gradually shifting loyal customers to your site — risk-free.
-      </p>
-    </Card>
+            <Card className="p-8 border border-border bg-card hover:shadow-lg transition-all duration-300">
+              <Zap className="h-10 w-10 text-brand-primary mx-auto mb-5" />
+              <h4 className="text-xl font-semibold mb-3">Transition, Not Disruption</h4>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Keep DoorDash & UberEats while gradually shifting loyal customers to your site — risk-free.
+              </p>
+            </Card>
 
-    <Card className="p-8 border border-border bg-card hover:shadow-lg transition-all duration-300">
-      <Rocket className="h-10 w-10 text-brand-primary mx-auto mb-5" />
-      <h4 className="text-xl font-semibold mb-3">Halal Profit Accelerator</h4>
-      <p className="text-muted-foreground text-sm leading-relaxed">
-        Soon: an integrated loyalty and marketing system to make 0% commission the new norm.
-      </p>
-    </Card>
-  </div>
+            <Card className="p-8 border border-border bg-card hover:shadow-lg transition-all duration-300">
+              <Rocket className="h-10 w-10 text-brand-primary mx-auto mb-5" />
+              <h4 className="text-xl font-semibold mb-3">Halal Profit Accelerator</h4>
+              <p className="text-muted-foreground text-sm leading-relaxed">
+                Soon: an integrated loyalty and marketing system to make 0% commission the new norm.
+              </p>
+            </Card>
+          </div>
 
-  {/* Button */}
-  <motion.div
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.6 }}
-    className="mt-16"
-  >
-    <a href="#process">
-      <Button
-        size="lg"
-        className="bg-brand-primary hover:bg-brand-primary/90 text-white rounded-full px-8"
-      >
-        See How It Works ↓
-      </Button>
-    </a>
-  </motion.div>
-</motion.section>
+          {/* Button */}
+          <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mt-16"
+          >
+            
+              <Button
+               onClick={() => scrollToSection('process')}
+                size="lg"
+                className="bg-brand-primary hover:bg-brand-primary/90 text-white rounded-full px-8 relative cursor-pointer"
+              >
+                See How It Works ↓
+              </Button>
+          </motion.div>
+        </motion.section>
 
       </div>
     </section>
