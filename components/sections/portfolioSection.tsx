@@ -181,18 +181,7 @@ export function PortfolioSection() {
                     </Button>
                 </div>
 
-                {/* CTA */}
-                <div className="text-center mt-12">
-                    <a href="#book">
-                        <Button
-                            size="lg"
-                            className="bg-brand-primary hover:bg-brand-primary/90 text-white rounded-full px-8"
-                        >
-                            I Want This for My Restaurant
-                          
-                        </Button>
-                    </a>
-                </div>
+             
             </div>
         </section>
     )

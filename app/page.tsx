@@ -4,7 +4,7 @@ import { DetailedValueSection, HeroSection } from "@/components/sections/heroSec
 import { PortfolioSection } from "@/components/sections/portfolioSection";
 import { ProcessSection } from "@/components/sections/process";
 import { WhyItMattersSection } from "@/components/sections/why";
-
+import  { PricingSection } from "@/components/sections/pricing";
 export default function Home() {
   return (
   <main>
@@ -13,6 +13,7 @@ export default function Home() {
    <WhyItMattersSection />
    <ProcessSection />
    <PortfolioSection />
+   <PricingSection/>
    <BookingSection/>
    <AcceleratorSection/>
   </main>
