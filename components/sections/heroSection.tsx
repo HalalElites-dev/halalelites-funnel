@@ -196,39 +196,45 @@ export function DetailedValueSection() {
           </Card>
 
           {/* Pricing */}
-          <Card className="p-10 bg-background glass-effect border border-brand-primary">
-            <div className="text-center space-y-6">
-              <div>
-                <div className="flex items-baseline justify-center gap-3">
-                  <span className="text-5xl md:text-6xl font-bold text-brand-primary">
-                    $899
-                  </span>
-                  <span className="text-2xl text-muted-foreground line-through">$1,199</span>
-                </div>
-                <p className="text-sm text-muted-foreground mt-2">One-time payment, no subscriptions</p>
-              </div>
+           <Card className="relative mx-auto max-w-2xl p-8 sm:p-10 text-center rounded-2xl bg-background glass-effect border border-brand-primary shadow-xl">
+      {/* --- TITLE --- */}
+      <h3 className="text-2xl font-semibold mb-2">One-time investment</h3>
 
-              <div className="space-y-3 pt-4">
-                {features.map((feature, index) => (
-                  <div key={index} className="flex items-center justify-center gap-3">
-                    <CheckCircle2 className="h-5 w-5 text-brand-primary flex-shrink-0" />
-                    <span className="text-base">{feature}</span>
-                  </div>
-                ))}
-              </div>
+      {/* --- PRICE SECTION --- */}
+      <div className="flex flex-col items-center justify-center gap-1 mb-6">
+        <div className="flex items-baseline justify-center gap-3 flex-wrap">
+          <span className="text-2xl sm:text-3xl text-muted-foreground line-through">
+            $1,199
+          </span>
+          <span className="text-5xl sm:text-6xl font-bold text-brand-primary">
+            $899
+          </span>
+        </div>
+        <p className="text-sm text-muted-foreground">Lifetime value, no subscriptions</p>
+      </div>
 
-              <Badge variant="secondary" className="text-sm font-semibold px-4 py-2">
-                ⚡ Only 4 spots available each month
-              </Badge>
+      {/* --- FEATURE LIST --- */}
+      <div className="mt-4 space-y-3 text-left sm:text-center">
+        {features.map((feature, i) => (
+          <div key={i} className="flex items-center justify-center gap-3">
+            <CheckCircle2 className="h-5 w-5 text-brand-primary flex-shrink-0" />
+            <span className="text-base leading-relaxed">{feature}</span>
+          </div>
+        ))}
+      </div>
 
-              <div className="pt-6">
-                <Button onClick={() => scrollToSection('pricing')}
-                  size="lg" className="text-lg px-10 py-6 rounded-full bg-brand-primary w-full sm:w-auto cursor-pointer">
-                  Book Your Free Strategy Call
-                </Button>
-              </div>
-            </div>
-          </Card>
+      {/* --- CTA BUTTON --- */}
+      <div className="mt-10">
+        <Button
+          onClick={() => scrollToSection('pricing')}
+          size="lg"
+          className="w-full py-6 text-lg font-semibold bg-brand-primary hover:bg-brand-primary/90 rounded-full transition cursor-pointer"
+        >
+          I Want This for My Restaurant
+        </Button>
+      </div>
+    </Card>
+  
 
           {/* Integrations */}
           <div className="text-center space-y-4">
