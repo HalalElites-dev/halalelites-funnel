@@ -184,7 +184,7 @@ export function PortfolioSection() {
                 {/* cta */}
                   <div className="flex justify-center mt-10">
                      <Button
-                               onClick={() => scrollToSection('process')}
+                               onClick={() => scrollToSection('book')}
                                 size="lg"
                                 className="bg-brand-primary hover:bg-brand-primary/90 text-white rounded-full px-8 relative cursor-pointer just"
                               >
