@@ -15,7 +15,7 @@ export function Navbar() {
   return (
     <>
       {/* Desktop Navigation - Floating Pill */}
-      <nav className="navbar-sticky hidden md:block">
+      <nav className="navbar-sticky glass-effect hidden md:block">
         <div className="nav-pill glass-effect">
           {/* Logo */}
           <Link className="flex items-center gap-2" href="#">
@@ -117,7 +117,7 @@ export function Navbar() {
                     scrollToSection(link.href.substring(1));
                     setIsMobileMenuOpen(false);
                   }}
-                  className="text-foreground/70 hover:text-foreground transition-colors py-2 text-center text-2xl uppercase cursor-pointer"
+                  className="text-foreground/70 hover:text-foreground transition-colors py-2 text-center text-xl  cursor-pointer"
                 >
                   {link.label}
                 </div>

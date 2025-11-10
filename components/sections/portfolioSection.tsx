@@ -189,7 +189,7 @@ export function PortfolioSection() {
                             className="bg-brand-primary hover:bg-brand-primary/90 text-white rounded-full px-8"
                         >
                             I Want This for My Restaurant
-                            <ArrowRight className="ml-2 h-5 w-5" />
+                          
                         </Button>
                     </a>
                 </div>

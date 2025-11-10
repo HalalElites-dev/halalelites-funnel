@@ -214,9 +214,9 @@ export function DetailedValueSection() {
       </div>
 
       {/* --- FEATURE LIST --- */}
-      <div className="mt-4 space-y-3 text-left sm:text-center">
+      <div className="mt-4 space-y-3 text-left">
         {features.map((feature, i) => (
-          <div key={i} className="flex items-center justify-center gap-3">
+          <div key={i} className="flex items-center justify-start md:justify-center gap-3">
             <CheckCircle2 className="h-5 w-5 text-brand-primary flex-shrink-0" />
             <span className="text-base leading-relaxed">{feature}</span>
           </div>
@@ -224,15 +224,14 @@ export function DetailedValueSection() {
       </div>
 
       {/* --- CTA BUTTON --- */}
-      <div className="mt-10">
-        <Button
-          onClick={() => scrollToSection('pricing')}
-          size="lg"
-          className="w-full py-6 text-lg font-semibold bg-brand-primary hover:bg-brand-primary/90 rounded-full transition cursor-pointer"
-        >
-          I Want This for My Restaurant
-        </Button>
-      </div>
+       <div className="flex flex-col sm:flex-row justify-center gap-4">
+            <Button
+              onClick={() => scrollToSection('pricing')}
+              size="lg" className="text-sm px-10 py-6 rounded-full bg-brand-primary shadow-2xl cursor-pointer ">
+              I Want This for My Restaurant
+            </Button>
+          </div>
+
     </Card>
   
 

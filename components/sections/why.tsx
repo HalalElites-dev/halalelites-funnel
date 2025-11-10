@@ -233,7 +233,7 @@ export function WhyItMattersSection() {
                 size="lg"
                 className="bg-brand-primary hover:bg-brand-primary/90 text-white rounded-full px-8 relative cursor-pointer"
               >
-                See How It Works ↓
+                See How It Works
               </Button>
           </motion.div>
         </motion.section>
