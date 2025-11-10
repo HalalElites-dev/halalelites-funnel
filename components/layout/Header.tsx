@@ -68,7 +68,8 @@ export function Navbar() {
       <nav className="fixed top-0 left-0 right-0 z-[9999] md:hidden bg-card/95 backdrop-blur-lg border-b border-border">
         <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center gap-2">
+          <Link className="flex items-center gap-2" href="#">
+
             <Image
               suppressHydrationWarning
               src="/LogoW.png"
@@ -85,8 +86,8 @@ export function Navbar() {
               height={32}
               className="hidden dark:block greyscale:hidden"
             />
-          </div>
-
+          
+          </Link>
           {/* Mobile Menu Button & Theme Toggle */}
           <div className="flex items-center gap-2">
             <ThemeToggle />
