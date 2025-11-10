@@ -7,6 +7,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { ExternalLink, ArrowRight, ArrowLeft } from "lucide-react"
 import Image from "next/image"
+import { scrollToSection } from "@/lib/utils"
 
 export function PortfolioSection() {
     const projects = [
@@ -180,7 +181,16 @@ export function PortfolioSection() {
                         <ArrowRight className="h-4 w-4" />
                     </Button>
                 </div>
-
+                {/* cta */}
+                  <div className="flex justify-center mt-10">
+                     <Button
+                               onClick={() => scrollToSection('process')}
+                                size="lg"
+                                className="bg-brand-primary hover:bg-brand-primary/90 text-white rounded-full px-8 relative cursor-pointer just"
+                              >
+                                I want this for my restaurant
+                              </Button>
+                  </div>
              
             </div>
         </section>

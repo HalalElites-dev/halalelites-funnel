@@ -46,7 +46,7 @@ import { scrollToSection } from '@/lib/utils'
             <Button
               onClick={() => scrollToSection('book')}
               size="lg" className="text-sm px-10 py-6 rounded-full bg-brand-primary shadow-2xl cursor-pointer ">
-              I Want This for My Restaurant
+              Book Free Call
             </Button>
           </div>
 
