@@ -53,58 +53,58 @@ export function Navbar() {
           {/* CTA & Theme Toggle */}
           <div className="flex items-center gap-3">
             <ThemeToggle />
-            
-              <Button
-                onClick={() => scrollToSection('pricing')}
-                className="bg-brand-primary hover:bg-brand-primary/90 text-white rounded-full px-6 cursor-pointer"
-              >
-                Book Free Call
-              </Button>
+
+            <Button
+              onClick={() => scrollToSection('pricing')}
+              className="bg-brand-primary hover:bg-brand-primary/90 text-white rounded-full px-6 cursor-pointer"
+            >
+              Book Free Call
+            </Button>
           </div>
         </div>
       </nav>
 
       {/* Mobile Navigation */}
-      <nav className="fixed top-0 left-0 right-0 z-[9999] md:hidden bg-card/95 backdrop-blur-lg border-b border-border">
-        <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
-          {/* Logo */}
-          <Link className="flex items-center gap-2" href="#">
+      <nav className="fixed top-0 left-0 right-0 z-[9999] md:hidden bg-card/95 backdrop-blur-lg border-b border-border translate-z-0">
+      <div className="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+        {/* Logo */}
+        <Link className="flex items-center gap-2" href="#">
 
-            <Image
-              suppressHydrationWarning
-              src="/LogoW.png"
-              alt="Logo (light)"
-              width={160}
-              height={32}
-              className="block dark:hidden greyscale:hidden"
-            />
-            <Image
-              suppressHydrationWarning
-              src="/Logo.png"
-              alt="Logo (dark)"
-              width={160}
-              height={32}
-              className="hidden dark:block greyscale:hidden"
-            />
-          
-          </Link>
-          {/* Mobile Menu Button & Theme Toggle */}
-          <div className="flex items-center gap-2">
-            <ThemeToggle />
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle menu"
-            >
-              {isMobileMenuOpen ? (
-                <X className="h-6 w-6" />
-              ) : (
-                <Menu className="h-6 w-6" />
-              )}
-            </Button>
-          </div>
+          <Image
+            suppressHydrationWarning
+            src="/LogoW.png"
+            alt="Logo (light)"
+            width={160}
+            height={32}
+            className="block dark:hidden greyscale:hidden"
+          />
+          <Image
+            suppressHydrationWarning
+            src="/Logo.png"
+            alt="Logo (dark)"
+            width={160}
+            height={32}
+            className="hidden dark:block greyscale:hidden"
+          />
+
+        </Link>
+        {/* Mobile Menu Button & Theme Toggle */}
+        <div className="flex items-center gap-2">
+          <ThemeToggle />
+          <Button
+            variant="ghost"
+            size="icon"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
+          >
+            {isMobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </Button>
         </div>
+      </div>
 
         {/* Mobile Menu Dropdown */}
         {isMobileMenuOpen && (
