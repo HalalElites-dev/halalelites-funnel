@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Menu, X } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import { ThemeToggle } from "@/components/ThemeToggle"
+// import { ThemeToggle } from "@/components/ThemeToggle"
 import Image from "next/image"
 import { NAV_LINKS } from "@/lib/constants"
 import Link from "next/link"
@@ -52,7 +52,7 @@ export function Navbar() {
 
           {/* CTA & Theme Toggle */}
           <div className="flex items-center gap-3">
-            <ThemeToggle />
+            {/* <ThemeToggle /> */}
 
             <Button
               onClick={() => scrollToSection('pricing')}
@@ -90,7 +90,7 @@ export function Navbar() {
         </Link>
         {/* Mobile Menu Button & Theme Toggle */}
         <div className="flex items-center gap-2">
-          <ThemeToggle />
+          {/* <ThemeToggle /> */}
           <Button
             variant="ghost"
             size="icon"

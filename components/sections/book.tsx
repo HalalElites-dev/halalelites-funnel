@@ -59,13 +59,13 @@ export function BookingSection() {
 
             {/* Right - Calendly Embed */}
             <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               className="lg:col-span-3"
             >
-              <Card className="p-2 min-h-[700px]">
+              <Card className="p-2 min-h-[700px] overflow-hidden">
                 <iframe
                   src="https://calendly.com/halal-elites/30min"
                   width="100%"
