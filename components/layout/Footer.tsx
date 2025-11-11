@@ -4,9 +4,10 @@ import { FaXTwitter, FaLinkedin } from "react-icons/fa6";
 import { NAV_LINKS } from "@/lib/constants"
 import Link from "next/link"
 import Image from "next/image"
+import { scrollToSection } from '@/lib/utils'
 
 export function Footer() {
- 
+
 
   const socialLinks = [
     { icon: FaXTwitter, href: "https://twitter.com/halalelites", label: "Twitter" },
@@ -21,24 +22,24 @@ export function Footer() {
           <div>
             <Link className="flex items-center mb-4 gap-2 " href="#">
 
-                        <Image
-                            suppressHydrationWarning
-                            src="/LogoW.png"
-                            alt="Logo (light)"
-                            width={160}
-                            height={32}
-                            className="block dark:hidden greyscale:hidden"
-                        />
-                        <Image
-                            suppressHydrationWarning
-                            src="/Logo.png"
-                            alt="Logo (dark)"
-                            width={160}
-                            height={32}
-                            className="hidden dark:block greyscale:hidden"
-                        />
+              <Image
+                suppressHydrationWarning
+                src="/LogoW.png"
+                alt="Logo (light)"
+                width={160}
+                height={32}
+                className="block dark:hidden greyscale:hidden"
+              />
+              <Image
+                suppressHydrationWarning
+                src="/Logo.png"
+                alt="Logo (dark)"
+                width={160}
+                height={32}
+                className="hidden dark:block greyscale:hidden"
+              />
 
-                    </Link>
+            </Link>
             <p className="text-sm text-muted-foreground leading-relaxed">
               Helping Halal restaurants take back control of their profits and customer relationships.
             </p>
@@ -49,13 +50,13 @@ export function Footer() {
             <h4 className="font-semibold mb-3">Quick Links</h4>
             <nav className="flex flex-col gap-2">
               {NAV_LINKS.map((link) => (
-                <a
+                <div
                   key={link.href}
-                  href={link.href}
-                  className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                  onClick={() => scrollToSection(link.href.substring(1))}
+                  className="text-sm text-muted-foreground hover:text-foreground transition-colors cursor-pointer"
                 >
                   {link.label}
-                </a>
+                </div>
               ))}
             </nav>
           </div>
