@@ -66,7 +66,7 @@ export function HeroSection() {
               </span>{" "}
               to Delivery Apps
             </h1>
-            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto font-light">
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-3xl mx-auto ">
               Take back your profits with a high-converting landing page built exclusively for Halal restaurants.
             </p>
           </div>
