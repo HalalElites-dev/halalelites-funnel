@@ -40,7 +40,7 @@ export function PortfolioSection() {
             },
             after: {
                 features: ["Branded site with menu", "Google Maps integration", "SEO Score: 92/100", "POS swap-in ready"],
-                url: "https://hadramout.netlify.app/",
+                url: "https://www.hadramouttoledo.com/",
                 desktopImage: "/hadramoutdesktop.webp",
                 mobileImage: "/hadramoutmobile.webp",
             },
@@ -63,7 +63,7 @@ export function PortfolioSection() {
     return (
         <section id="portfolio" className="section-spacing relative overflow-hidden">
             <div className="container mx-auto px-4 text-center mb-12">
-            
+
                 <h1 className="text-4xl md:text-5xl font-bold leading-tight text-balance">
                     From “No Website” to SEO-Ready Online Presence
                 </h1>
@@ -121,7 +121,7 @@ export function PortfolioSection() {
                                 </div>
 
                                 {/* RIGHT IMAGES */}
-                                 <div className="lg:col-span-7 relative h-[550px]  lg:w-full flex items-center justify-center">
+                                <div className="lg:col-span-7 relative h-[550px]  lg:w-full flex items-center justify-center">
                                     <div className="relative w-full h-full ">
                                         <div className="absolute top-0 left-0 right-1 lg:right-5 h-[65%] rounded-lg overflow-hidden border border-border  shadow-2xl">
                                             <Image
@@ -137,7 +137,7 @@ export function PortfolioSection() {
                                                 alt={`${project.name} mobile`}
                                                 fill
                                                 className="object-cover"
-                                                
+
                                             />
                                         </div>
                                     </div>
@@ -182,16 +182,16 @@ export function PortfolioSection() {
                     </Button>
                 </div>
                 {/* cta */}
-                  <div className="flex justify-center mt-10">
-                     <Button
-                               onClick={() => scrollToSection('book')}
-                                size="lg"
-                                className="bg-brand-primary hover:bg-brand-primary/90 text-white rounded-full px-8 relative cursor-pointer just"
-                              >
-                                I want this for my restaurant
-                              </Button>
-                  </div>
-             
+                <div className="flex justify-center mt-10">
+                    <Button
+                        onClick={() => scrollToSection('book')}
+                        size="lg"
+                        className="bg-brand-primary hover:bg-brand-primary/90 text-white rounded-full px-8 relative cursor-pointer just"
+                    >
+                        I want this for my restaurant
+                    </Button>
+                </div>
+
             </div>
         </section>
     )
